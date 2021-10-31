@@ -1,0 +1,72 @@
+ @charset "utf-8";
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+
+* {
+  font-family: 'Vollkorn', sans-serif;
+}
+
+code {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, 0.7) !important;
+  text-align: left;
+}
+
+h1 {
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#titles {
+  text-align: center;
+}
+
+#spin {
+  padding: 2rem 2rem;
+}
+
+#recipename {
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+}
+
+.thefooter {
+  padding-top: 2rem;
+}
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+a{
+  color: #ccd500;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: #a9b119;
+}
+
+.randomizeMachine {
+
+  height: 100px;
+  margin: auto;
+}
+
+.machineResult {
+  text-align: center;
+}
+
+.randomizeMachine img {
+  max-width: 100px;
+}

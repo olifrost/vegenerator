@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vegenerator</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./dist/jquery.slotmachine.css" type="text/css" media="screen" />
+<!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./dist/slotmachine.js"></script>
+    <link rel="stylesheet" href="./styles/flexboxgrid.css" type="text/css" media="screen" />
+    
+    <script src="./dist/jquery.slotmachine.js"></script>
+  </head>
+
+<script src="./dist/words.js"></script>
+  <body>
+    <div class="header-line"></div>
+
+
+
+            <script id="codeScript1">
+
+// Using jQuery
+$('#planeMachine2').slotMachine({
+  active: 1,
+  delay: 450,
+  auto: 1500,
+  randomize() {
+    return this.nextIndex;
+  }
+});
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="randomize">
+      <div class="container">
+  <div class="row center-xs">
+          <div class="col titles" align="center">
+            <h1>Vegenerator</h1>
+            <p id="recipename">Generate a recipe</p>
+          </div>
+        </div>
+        
+        <div id="list">
+        </div>
+
+        <div>
+        </div>
+
+     
+
+        <div class="row center-xs">
+          <div class="col">
+            <div>
+              <div id="machine1" class="randomizeMachine">
+               
+              </div>
+            </div>
+            <div id="machine1Result" class="col-xs-3 machineResult">
+               <div class="btn-group btn-group-sm btn-group-justified nudgehold" role="group">
+                <button  type="button" class="btn btn-danger btn-lg nudge" onclick="nudge(machine1)" >Nudge</button>
+                <button type="button" class="btn btn-danger btn-lg hold" onclick="spin(machine1)" >Hold</button></div>
+              </div>  
+          </div>
+
+          <div class="col">
+            <div>
+              <div id="machine2" class="randomizeMachine">
+              </div>
+            </div>
+            <div id="machine2Result" class="col-xs-3 machineResult">
+              <div class="btn-group btn-group-sm btn-group-justified nudgehold" role="group">
+                <button  type="button" class="btn btn-danger btn-lg nudge" onclick="nudge(machine2)" >Nudge</button>
+                <button  type="button" class="btn btn-danger btn-lg hold" onclick="spin(machine2)" >Hold</button></div>
+              </div>  
+            </div>
+
+
+          <div class="col">
+            <div>
+              <div id="machine3" class="randomizeMachine">
+            </div>
+            <div id="machine3Result" class="col-xs-3 machineResult">
+              <div class="btn-group btn-group-sm btn-group-justified nudgehold" role="group">
+                <button type="button" class="btn btn-danger btn-lg nudge" onclick="nudge(machine3)" >Nudge</button>
+                <button type="button" class="btn btn-danger btn-lg hold" onclick="spin(machine3)" >Hold</button></div>
+              </div>  
+            </div>
+          </div>
+
+          <div class="col">
+            <div>
+              <div id="machine4" class="randomizeMachine">
+            </div>
+            <div id="machine4Result" class="col-xs-3 machineResult">
+              <div class="btn-group btn-group-sm btn-group-justified nudgehold" role="group">
+                <button  type="button" class="btn btn-danger btn-lg nudge" onclick="nudge(machine4)" >Nudge</button>
+                <button  type="button" class="btn btn-danger btn-lg hold" onclick="spin(machine4)" >Hold</button></div>
+              </div>  
+            </div>
+          </div> 
+
+        </div>
+        </div>
+
+
+        <div id="spin" class="row center-xs" align="center">
+          <div class="col">
+          <div class="btn-group btn-group-justified" role="group">
+            <button id="randomizeButton" type="button" class="btn btn-danger btn-lg" onclick="spin(5)">Spin</button>
+          </div>
+          </div>
+        </div>
+
+          <div class="row center-xs" align="center" class="thefooter">
+            <div class="col">
+              <p id="combinations"></p>
+            </div>
+          </div>
+        </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+   <script type="text/javascript">
+      function listImages(list, themachineid) {
+      list.forEach(function(image) {    // for each link l in ArrayOfImages
+      var div = document.createElement('div');
+      var img = document.createElement('img'); // create an img element
+      // div.id = image
+      var themachine = document.getElementById(themachineid);
+      img.src = "img/" + image + ".png";  // set its src to the link l
+      themachine.appendChild(div);          // append it to the body 
+      div.appendChild(img);          // append it to the body 
+      });
+      }
+      listImages(vegetables, "machine1");
+      listImages(vegetables, "machine2");
+      listImages(vegetables, "machine3");
+      listImages(base, "machine4");
+</script>
+
+
+    <script id="codeScript2">
+// Define Machine
+const btn = document.querySelector('#randomizeButton');
+const results = {
+  machine1: document.querySelector('#machine1Result'),
+  machine2: document.querySelector('#machine2Result'),
+  machine3: document.querySelector('#machine3Result'),
+  machine4: document.querySelector('#machine4Result')
+};
+const el1 = document.querySelector('#machine1');
+const el2 = document.querySelector('#machine2');
+const el3 = document.querySelector('#machine3');
+const el4 = document.querySelector('#machine4');
+const machine1 = new SlotMachine(el1, { active: 0, type: vegetables, number: 1 });
+const machine2 = new SlotMachine(el2, { active: 1, type: vegetables, number: 2 });
+const machine3 = new SlotMachine(el3, { active: 2, type: vegetables, number: 3});
+const machine4 = new SlotMachine(el4, { active: 3, type: base, number: 4 });
+var vegetable1 = "";
+var vegetable2 = "";
+var vegetable3 = "";
+var thebase = "";
+
+var machine1index = "";
+var machine2index = "";
+var machine3index = "";
+var machine4index = "";
+
+var theingredient = "nil"
+
+// Slot Machine
+
+function randomNumber() {
+        therandomindex = Math.floor(Math.random() * this.tiles.length);
+        alert(therandomindex);
+        checkRepeated(therandomindex);
+      }
+
+function checkRepeated(thenumber) {
+    if (machine1index == thenumber) {
+      randomNumber();
+    }
+    else if (machine2index == thenumber) {
+      randomNumber();
+    }
+    else if (machine3index == thenumber) {
+      randomNumber();
+    }
+    else if (machine4index == thenumber) {
+      randomNumber();
+    }
+    else {
+      return thenumber;
+    }
+}
+
+
+
+function getnamefromIndex(index, type) {
+if (index > 0) {    
+     theingredient = type[index - 1];
+     return theingredient;
+   }
+   else {
+    theingredient = type[index + type.length - 1];
+    return theingredient;
+   }
+}
+
+function whichNametoUpdate(active, machine, name) {
+  if (machine == 1) {
+    vegetable1 = name;
+    machine1index = active;
+  }
+  if (machine == 2) {
+    vegetable2 = name;
+    machine2index = active;
+  }
+  if (machine == 3) {
+    vegetable3 = name;
+    machine3index = active;
+  }
+  if (machine == 4) {
+    thebase = name;
+    machine4index = active;
+  }
+}
+
+var thetype = "";
+var theindex = "";
+var themachine = "";
+
+// Generate Recipe Name
+function onComplete(active, type){
+  thetype = this.type;
+  theindex = this.active;
+  themachine = this.number;
+  whichNametoUpdate(theindex, themachine, getnamefromIndex(theindex, thetype));
+  setRecipeName();
+  //results[this.element.id].innerText = `${theingredient}`;
+}
+
+function setRecipeName() {
+  var recipename =  vegetable1 + ", " + vegetable2 + " and " + vegetable3 + " " + thebase;
+  document.getElementById("recipename").innerText = recipename;
+  $("#recipename").animate({ opacity: 1 }, 1000);
+}
+
+
+// Number
+
+// Combinations
+var combinations = (vegetables.length * vegetables.length * vegetables.length * base.length);
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+$("#combinations").text("one of " + numberWithCommas(combinations) + " possible combinations");
+
+// Disable Nudge Hold
+function disableNudgeHold(truth) {
+  $('button.nudge').attr('disabled', truth);
+  $('button.hold').attr('disabled', truth);
+}
+disableNudgeHold(true);
+
+// Nudge and Spin
+function nudge(machine) {
+  machine.next();
+  whichNametoUpdate(machine.active, machine.number, getnamefromIndex(machine.active, machine.type));
+  setRecipeName();
+}
+
+var slottimes = new Array(
+0,
+500,
+1000,
+1500,
+);
+
+
+var numberofspins = 0;
+
+function addSpin() {
+  numberofspins = numberofspins + 1;
+}
+
+function spin(machine) {
+  numberofspins = 0;
+  $("#recipename").animate({ opacity: 0 }, 200);
+  disableNudgeHold(false);
+  if (machine != machine1) {
+   //machine1.shuffle(2, onComplete ;
+    setTimeout(() => machine1.shuffle(2, onComplete), slottimes[numberofspins]);
+    addSpin();
+  }
+  if (machine != machine2) {
+    setTimeout(() => machine2.shuffle(2, onComplete), slottimes[numberofspins]);
+    addSpin();
+  }
+  if (machine != machine3) {
+    setTimeout(() => machine3.shuffle(2, onComplete), slottimes[numberofspins]);
+    addSpin();
+  }
+  if (machine != machine4) {
+    setTimeout(() => machine4.shuffle(2, onComplete), slottimes[numberofspins]);
+    addSpin();
+  } 
+}
+
+    </script>
+
+
+  </body>
+</html>
