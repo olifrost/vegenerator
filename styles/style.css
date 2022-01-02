@@ -57,6 +57,16 @@ h1 {
 /*  margin-top: 2rem;*/
 }
 
+#recipename {
+  font-style: italic;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 1.5rem;
+}
+
+
+
+
 
 #titles {
   text-align: center;
@@ -66,12 +76,7 @@ h1 {
   padding-bottom: 2rem;
 }
 
-#recipename {
-  font-style: italic;
-  font-size: 1.5rem;
-  text-align: center;
-  height: 1.5rem;
-}
+
 
 button {
   display: inline-block;
@@ -95,18 +100,8 @@ a:hover{
   color: white;
 }
 
-/*@media only screen and (min-width: 1000px) {*/
 
-#randomize {
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
 
-}
-
-/*}*/
 
 .mainpage {
   margin: auto;
@@ -134,7 +129,7 @@ text-align: center;
 }
 
 .col {
-  max-width: 242px;
+  max-width: 240px;
 }
 
 .randomizeMachine {
@@ -181,7 +176,7 @@ h1::after {
 
 /* Button Group */
 
-.btn-group button , button{
+.btn-group button, button{
   background-color: black; /* Green background */
   border: 1px solid #86EFAC; /* Green border */
 
@@ -241,6 +236,98 @@ button:disabled {
   border-color: grey;
 }
 
+/*Mobile Styles*/
+
+@media only screen and (min-width: 800px) {
+
+#randomize {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+}
+}
+
+#randomize {  
+    display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding-top: 0;
+  }
+  h1::after {
+  content: "";
+  width: 5px;
+  height: 2rem;
+  position: relative;
+  right: -5px;
+  top:  5px;
+}
+  #recipename {
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+#vegetableMachine {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+button {
+  font-size: 1.5rem;
+  margin: 0;
+
+  padding: 1rem;
+  margin-top: 1rem;
+
+}
+
+#spin {
+  margin: 0;
+  padding-bottom: 0.5;
+}
+
+.btn-group button {
+  font-size: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.machineResult {
+  padding: 0.5rem;
+}
+
+.col {
+  max-width: 140px;
+}
+
+.randomizeMachine {
+  height: 140px;
+  max-width: 240px;
+  margin: auto;
+}
+
+.randomizeMachine img {
+  max-width: 140px;
+  filter: invert(1);
+
+}
+
+.thefooter {
+  font-size: 0.5rem;
+}
+
+
+}
 
 
 /*CRT*/
