@@ -21,8 +21,12 @@
   <body>
   
 
-    <div id="randomize">
-      <div class="container">
+  <div id="randomize">
+
+
+  <div class="mainpage">
+  <div class="container">
+
   <div class="row center-xs crt">
           <div>
             <div>
@@ -41,7 +45,8 @@
 
      
 
-        <div id="vegetableMachine" class="row vegMachine hidden center-xs">
+        <div id="vegetableMachine" class="row vegMachine center-xs animate__animated animate__fadeIn animate__slow
+        animate__delay-3s">
           <div class="col">
             <div>
               <div id="machine1" class="randomizeMachine">
@@ -93,10 +98,11 @@
           </div> 
 
         </div>
-        
 
 
-        <div id="spin" class="row center-xs" align="center">
+
+        <div id="spin" class="row center-xs animate__animated animate__flipInX
+        animate__delay-4s" align="center">
           <div class="col">
           <div class="btn btn-lg" role="group">
             <button id="randomizeButton" type="button" class="btn" onclick="spin(5)">Spin</button>
@@ -104,19 +110,20 @@
           </div>
         </div>
 
-</div> 
-        </div>
+    </div> 
+    </div>      
 
-          <footer class="row center-xs" align="center" class="thefooter">
-            <div class="col-xs">
-              <p id="combinations"></p>
-              <p>Created by <a href="https://olifro.st">Oli Frost</a> and <a href="https://instagram.com/scraggledragon">Scraggle Dragon</a></p>
-            </div>
-          </footer>
+    <footer class="thefooter animate__animated animate__fadeInUp
+        animate__delay-5s">
+      <div class="">
+        <p id="combinations"></p>
+        <p>created by <a href="https://olifro.st">Oli Frost</a> and <a href="https://instagram.com/scraggledragon">Scraggle Dragon</a></p>
+      </div>
+    </footer>
 
-        
 
-          
+</div>     
+ 
 
 
    <script type="text/javascript">
@@ -257,7 +264,7 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-$("#combinations").text("One of " + numberWithCommas(combinations) + " possible combinations");
+$("#combinations").text(numberWithCommas(combinations) + " possible combinations");
 
 // Disable Nudge Hold
 function disableNudgeHold(truth) {
@@ -325,7 +332,7 @@ function spin(machine) {
 
 var i = 0;
 var txt = 'vegenerator'; /* The text */
-var speed = 30; /* The speed/duration of the effect in milliseconds */
+var speed = 60; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
   if (i < txt.length) {
@@ -337,7 +344,7 @@ function typeWriter() {
 
 var g = 0;
 var txt2 = 'generate a recipe'; /* The text */
-var speed = 30; /* The speed/duration of the effect in milliseconds */
+var speed = 60; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter2() {
   if (g < txt2.length) {
@@ -347,14 +354,31 @@ function typeWriter2() {
   }
 }
 
-function visibleMachine() {
-  document.getElementById("vegetableMachine").className = 'row vegMachine center-xs visible';
+// function visibleMachine() {
+//   document.getElementById("vegetableMachine").className = 'row vegMachine center-xs visible';
+// }
+
+var vegetableMachine = document.getElementById("vegetableMachine");
+
+function visible(element) {
+  element.classList.remove('hidden');
+  element.classList.add('visible');
 }
 
-typeWriter();
-setTimeout(typeWriter2, 1000);
-setTimeout(visibleMachine, 2000);
-setTimeout(spin(5), 500);
+setTimeout(typeWriter, 500);
+setTimeout(typeWriter2, 1500);
+// setTimeout(function() {
+//     visible(vegetableMachine);
+// }, 3000)
+// // setTimeout(function() {
+// //     flipIn(spin);
+// // }, 3500)
+// setTimeout(function() {
+//     footer(spin);
+// }, 4000)
+// setTimeout(spin(5), 200);
+
+
 
 
 // 
