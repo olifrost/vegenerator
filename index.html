@@ -1,164 +1,230 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Vegenerator</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="stylesheet" href="./styles/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="./dist/jquery.slotmachine.css" type="text/css" media="screen" />
 
-    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./dist/slotmachine.js"></script>
     <link rel="stylesheet" href="./styles/flexboxgrid.css" type="text/css" media="screen" />
-    
-    
+    <link rel="stylesheet" href="./styles/animate.css" type="text/css" media="screen" />
+
+
     <script src="./dist/jquery.slotmachine.js"></script>
-  </head>
+</head>
 
 <script src="./dist/words.js"></script>
-  <body>
-  
 
-  <div id="randomize">
+<body>
 
 
-  <div class="mainpage">
-  <div class="container">
+    <div id="randomize">
 
-  <div class="row center-xs crt">
-          <div>
-            <div>
-              <h1 id="typewriter"></h1>
+
+        <div class="mainpage">
+            <div class="container">
+
+                <div class="row center-xs crt">
+                    <div>
+                        <div>
+                            <h1 id="typewriter"></h1>
+                        </div>
+                        <p id="recipename"> </p>
+                    </div>
+                </div>
+
+                <div id="list">
+                </div>
+
+                <div>
+                </div>
+
+                <div id="vegetableMachine" class="hidden row vegMachine center-xs">
+
+                    <div class="col">
+                        <div>
+                            <div id="machine1" class="randomizeMachine">
+
+                            </div>
+                        </div>
+                        <div id="machine1Result" class="col machineResult center-xs row">
+                            <div class="btn-group nudgehold" role="group">
+                                <button type="button" class="nudge" onclick="nudge(machine1)">Nudge</button>
+                                <button type="button" class="hold button-outline" onclick="spin(machine1)">Hold</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="col">
+                        <div>
+                            <div id="machine2" class="randomizeMachine">
+                            </div>
+                        </div>
+                        <div id="machine2Result" class="col machineResult center-xs row">
+                            <div class="btn-group nudgehold" role="group">
+                                <button type="button" class="btn nudge" onclick="nudge(machine2)">Nudge</button>
+                                <button type="button " class="btn button-outline hold" onclick="spin(machine2)">Hold</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="col">
+                        <div>
+                            <div id="machine3" class="randomizeMachine">
+                            </div>
+                            <div id="machine3Result" class="col machineResult center-xs row">
+                                <div class="btn-group nudgehold" role="group">
+                                    <button type="button" class="btn nudge" onclick="nudge(machine3)">Nudge</button>
+                                    <button type="button" class="btn button-outline hold" onclick="spin(machine3)">Hold</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div>
+                            <div id="machine4" class="randomizeMachine">
+                            </div>
+                            <div id="machine4Result" class="col machineResult center-xs row">
+                                <div class="btn-group nudgehold" role="group">
+                                    <button type="button" class="btn nudge" onclick="nudge(machine4)">Nudge</button>
+                                    <button type="button button-outline" class="button-outline hold" onclick="spin(machine4)">Hold</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                <div id="spin" class="row center-xs hidden" align="center">
+                    <div class="col">
+                        <div class="btn btn-lg" role="group">
+                            <button id="randomizeButton" type="button" class="btn" onclick="spin(5)">Spin</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 center-xs">
+                    <p class="small" onclick="Budgetify()">Budgetify</p>
+                  </div>
+                </div>
+
             </div>
-            <p id="recipename"> </p>
-          </div>
         </div>
-        
-        <div id="list">
-        </div>
 
-        <div>
-        </div>
-
-        <div id="vegetableMachine" class="row vegMachine center-xs animate__animated animate__fadeIn animate__slow
-        animate__delay-3s">
-          <div class="col">
-            <div>
-              <div id="machine1" class="randomizeMachine">
-               
-              </div>
+        <footer id="footer" class="thefooter hidden">
+            <div class="">
+                <p id="combinations"></p>
+                <p>created by <a class="nb" href="https://olifro.st">Oli Frost</a> and <a class="nb" href="https://instagram.com/scraggledragon">Scraggle Dragon</a></p>
             </div>
-            <div id="machine1Result" class="col machineResult center-xs row">
-               <div class="btn-group nudgehold" role="group">
-                <button  type="button" class="nudge" onclick="nudge(machine1)" >Nudge</button>
-                <button type="button" class="hold button-outline" onclick="spin(machine1)" >Hold</button></div>
-              </div>  
-          </div>
+        </footer>
 
-          <div class="col">
-            <div>
-              <div id="machine2" class="randomizeMachine">
-              </div>
-            </div>
-            <div id="machine2Result" class="col machineResult center-xs row">
-              <div class="btn-group nudgehold" role="group">
-                <button  type="button" class="btn nudge" onclick="nudge(machine2)" >Nudge</button>
-                <button  type="button " class="btn button-outline hold" onclick="spin(machine2)" >Hold</button></div>
-              </div>  
-            </div>
+<!--         <audio id="vegenerator-music" loop>
+            <source src="sound/vegenerator.m4a" type="audio/mpeg">
+        </audio> -->
 
+        <audio id="vegenerator-dial-intro">
+            <source src="sound/vegenerator-dial-intro.m4a" type="audio/mpeg">
+        </audio>
 
-          <div class="col">
-            <div>
-              <div id="machine3" class="randomizeMachine">
-            </div>
-            <div id="machine3Result" class="col machineResult center-xs row">
-              <div class="btn-group nudgehold" role="group">
-                <button type="button" class="btn nudge" onclick="nudge(machine3)" >Nudge</button>
-                <button type="button" class="btn button-outline hold" onclick="spin(machine3)" >Hold</button></div>
-              </div>  
-            </div>
-          </div>
+        <audio id="vegenerator-minusintro" loop>
+            <source src="sound/vegenerator-minusintro.m4a" type="audio/mpeg">
+        </audio>
 
-          <div class="col">
-            <div>
-              <div id="machine4" class="randomizeMachine">
-            </div>
-            <div id="machine4Result" class="col machineResult center-xs row">
-              <div class="btn-group nudgehold" role="group">
-                <button  type="button" class="btn nudge" onclick="nudge(machine4)" >Nudge</button>
-                <button  type="button button-outline" class="button-outline hold" onclick="spin(machine4)" >Hold</button></div>
-              </div>  
-            </div>
-          </div> 
+        <audio id="nudge-sound">
+            <source src="sound/vsound01.wav" type="audio/mpeg">
+        </audio>
 
-        </div>
-        
+        <audio id="hold-sound">
+            <source src="sound/vsound09.wav" type="audio/mpeg">
+        </audio>
+
+        <audio id="spin-sound">
+            <source src="sound/vsound11.wav" type="audio/mpeg">
+        </audio>
 
 
-        <div id="spin" class="row center-xs animate__animated animate__flipInX
-        animate__delay-4s" align="center">
-          <div class="col">
-          <div class="btn btn-lg" role="group">
-            <button id="randomizeButton" type="button" class="btn" onclick="spin(5)">Spin</button>
-          </div>
-          </div>
-        </div>
+        <audio id="firstspin-sound">
+            <source src="sound/firstspin.wav" type="audio/mpeg">
+        </audio>
+
+        <audio id="success-sound">
+            <source src="sound/vsound03.wav" type="audio/mpeg">
+        </audio>
+
+        <audio id="beep1-3">
+            <source src="sound/beep1.wav" type="audio/mpeg">
+        </audio>
+
+        <audio id="beep4">
+            <source src="sound/beep2.wav" type="audio/mpeg">
+        </audio>
 
     </div> 
-    </div>      
-
-    <footer class="thefooter animate__animated animate__fadeInUp
-        animate__delay-5s">
-      <div class="">
-        <p id="combinations"></p>
-        <p>created by <a href="https://olifro.st">Oli Frost</a> and <a href="https://instagram.com/scraggledragon">Scraggle Dragon</a></p>
-      </div>
-    </footer>
-
-
-</div>     
  
+ 
+ <script type = "text/javascript" >
+    function listImages(list, themachineid) {
+        list.forEach(function(image) { // for each link l in ArrayOfImages
+            var div = document.createElement('div');
+            var img = document.createElement('img'); // create an img element
+            // div.id = image
+            var themachine = document.getElementById(themachineid);
+            img.src = "img/" + image + ".png"; // set its src to the link l
+            themachine.appendChild(div); // append it to the body 
+            div.appendChild(img); // append it to the body 
+        });
+    }
+listImages(vegetables, "machine1");
+listImages(vegetables, "machine2");
+listImages(vegetables, "machine3");
+listImages(base, "machine4"); 
 
-
-   <script type="text/javascript">
-      function listImages(list, themachineid) {
-      list.forEach(function(image) {    // for each link l in ArrayOfImages
-      var div = document.createElement('div');
-      var img = document.createElement('img'); // create an img element
-      // div.id = image
-      var themachine = document.getElementById(themachineid);
-      img.src = "img/" + image + ".png";  // set its src to the link l
-      themachine.appendChild(div);          // append it to the body 
-      div.appendChild(img);          // append it to the body 
-      });
-      }
-      listImages(vegetables, "machine1");
-      listImages(vegetables, "machine2");
-      listImages(vegetables, "machine3");
-      listImages(base, "machine4");
-</script>
-
-
-    <script id="codeScript2">
 // Define Machine
-const btn = document.querySelector('#randomizeButton');
+    const btn = document.querySelector('#randomizeButton');
 const results = {
-  machine1: document.querySelector('#machine1Result'),
-  machine2: document.querySelector('#machine2Result'),
-  machine3: document.querySelector('#machine3Result'),
-  machine4: document.querySelector('#machine4Result')
+    machine1: document.querySelector('#machine1Result'),
+    machine2: document.querySelector('#machine2Result'),
+    machine3: document.querySelector('#machine3Result'),
+    machine4: document.querySelector('#machine4Result')
 };
 const el1 = document.querySelector('#machine1');
 const el2 = document.querySelector('#machine2');
 const el3 = document.querySelector('#machine3');
 const el4 = document.querySelector('#machine4');
-const machine1 = new SlotMachine(el1, { active: 0, type: vegetables, number: 1 });
-const machine2 = new SlotMachine(el2, { active: 1, type: vegetables, number: 2 });
-const machine3 = new SlotMachine(el3, { active: 2, type: vegetables, number: 3});
-const machine4 = new SlotMachine(el4, { active: 3, type: base, number: 4 });
+const machine1 = new SlotMachine(el1, {
+    active: 0,
+    type: vegetables,
+    number: 1
+});
+const machine2 = new SlotMachine(el2, {
+    active: 1,
+    type: vegetables,
+    number: 2
+});
+const machine3 = new SlotMachine(el3, {
+    active: 2,
+    type: vegetables,
+    number: 3
+});
+const machine4 = new SlotMachine(el4, {
+    active: 3,
+    type: base,
+    number: 4
+});
+
 var vegetable1 = "";
 var vegetable2 = "";
 var vegetable3 = "";
@@ -171,92 +237,132 @@ var machine4index = "";
 
 var theingredient = "nil"
 
-// Slot Machine
-
-function randomNumber() {
-        therandomindex = Math.floor(Math.random() * this.tiles.length);
-        alert(therandomindex);
-        checkRepeated(therandomindex);
-      }
-
-function checkRepeated(thenumber) {
-    if (machine1index == thenumber) {
-      randomNumber();
-    }
-    else if (machine2index == thenumber) {
-      randomNumber();
-    }
-    else if (machine3index == thenumber) {
-      randomNumber();
-    }
-    else if (machine4index == thenumber) {
-      randomNumber();
-    }
-    else {
-      return thenumber;
-    }
-}
-
-
-
-function getnamefromIndex(index, type) {
-if (index > 0) {    
-     theingredient = type[index - 1];
-     return theingredient;
-   }
-   else {
-    theingredient = type[index + type.length - 1];
-    return theingredient;
-   }
-}
-
-function whichNametoUpdate(active, machine, name) {
-  if (machine == 1) {
-    vegetable1 = name;
-    machine1index = active;
-  }
-  if (machine == 2) {
-    vegetable2 = name;
-    machine2index = active;
-  }
-  if (machine == 3) {
-    vegetable3 = name;
-    machine3index = active;
-  }
-  if (machine == 4) {
-    thebase = name;
-    machine4index = active;
-  }
-}
-
 var thetype = "";
 var theindex = "";
 var themachine = "";
 
 var loaded = false;
+var firstspin = false;
+
+var slottimes = new Array(
+    0,
+    500,
+    1000,
+    1500,
+);
+
+var vegetableMachine = document.getElementById("vegetableMachine");
+var spinbutton = document.getElementById("spin");
+var footer = document.getElementById("footer");
+var machineResult = document.getElementById("machineResult");
+
+var numberofspins = 0;
+var therecipename = document.getElementById("recipename")
+var conjunction = "";
+var comma = "";
+
+// Slot Machine
+
+function randomNumber() {
+    therandomindex = Math.floor(Math.random() * this.tiles.length);
+    alert(therandomindex);
+    checkRepeated(therandomindex);
+}
+
+function checkRepeated(thenumber) {
+    if (machine1index == thenumber) {
+        randomNumber();
+    } else if (machine2index == thenumber) {
+        randomNumber();
+    } else if (machine3index == thenumber) {
+        randomNumber();
+    } else if (machine4index == thenumber) {
+        randomNumber();
+    } else {
+        return thenumber;
+    }
+}
+
+
+function getnamefromIndex(index, type) {
+    if (index > 0) {
+        theingredient = type[index - 1];
+        return theingredient;
+    } else {
+        theingredient = type[index + type.length - 1];
+        return theingredient;
+    }
+}
+
+function whichNametoUpdate(active, machine, name) {
+    if (machine == 1) {
+        vegetable1 = name;
+        machine1index = active;
+    }
+    if (machine == 2) {
+        vegetable2 = name;
+        machine2index = active;
+        comma = ", "
+    }
+    if (machine == 3) {
+        vegetable3 = name;
+        machine3index = active;
+        conjunction = " and "
+    }
+    if (machine == 4) {
+        thebase = name;
+        machine4index = active;
+    }
+}
+
 
 // Generate Recipe Name
-function onComplete(active, type){
-  thetype = this.type;
-  theindex = this.active;
-  themachine = this.number;
-  whichNametoUpdate(theindex, themachine, getnamefromIndex(theindex, thetype));
-  setRecipeName();
 
-  //results[this.element.id].innerText = `${theingredient}`;
+function onComplete(active, type) {
+    thetype = this.type;
+    theindex = this.active;
+    themachine = this.number;
+    whichNametoUpdate(theindex, themachine, getnamefromIndex(theindex, thetype));
+    if (themachine != 4) {
+      $("#beep1-3").get(0).play();
+    }
+    else {
+      $("#beep4").get(0).play();
+    }
+    setRecipeName();
+}
+
+function wrapSpan(veg) {
+    return "<span class='nb vg'>" + veg + "</span>"
 }
 
 function setRecipeName() {
-  var recipename =  vegetable1 + ", " + vegetable2 + " and " + vegetable3 + " " + thebase;
-  document.getElementById("recipename").innerText = recipename;
-  $("#recipename").animate({ opacity: 1 }, 1000);
+
+    var recipename = wrapSpan(vegetable1) + comma + wrapSpan(vegetable2) + conjunction + wrapSpan(vegetable3) + " " + wrapSpan(thebase);
+    
+ 
+    therecipename.innerHTML = recipename;
+    
+    
+    if (firstspin == false) {
+        setTimeout(function() {
+            firstspin = true;
+             $("#recipename").animate({
+              opacity: 1
+            }, 1000);
+            animateCSS('#machine1Result', 'pulse');
+            animateCSS('#machine2Result', 'pulse');
+            animateCSS('#machine3Result', 'pulse');
+            animateCSS('#machine4Result', 'pulse');
+        }, 1500)
+    }
 }
 
 
-// Number
+// Number Combinations
 
-// Combinations
 var combinations = (vegetables.length * vegetables.length * vegetables.length * base.length);
+
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -265,65 +371,89 @@ $("#combinations").text(numberWithCommas(combinations) + " possible combinations
 
 // Disable Nudge Hold
 function disableNudgeHold(truth) {
-  $('button.nudge').attr('disabled', truth);
-  $('button.hold').attr('disabled', truth);
+    $('button.nudge').attr('disabled', truth);
+    $('button.hold').attr('disabled', truth);
 }
 disableNudgeHold(true);
 
 // Nudge and Spin
 function nudge(machine) {
-  machine.next();
-  whichNametoUpdate(machine.active, machine.number, getnamefromIndex(machine.active, machine.type));
-  setRecipeName();
+    $("#nudge-sound").get(0).play();
+    machine.next();
+    whichNametoUpdate(machine.active, machine.number, getnamefromIndex(machine.active, machine.type));
+    setRecipeName();
+
 }
 
-var slottimes = new Array(
-0,
-500,
-1000,
-1500,
-);
-
-
-var numberofspins = 0;
+// Spin Machine
 
 function addSpin() {
-  numberofspins = numberofspins + 1;
+    numberofspins = numberofspins + 1;
 }
 
 function spin(machine) {
-  if (loaded == false) {
-    machine1.shuffle();
-    machine2.shuffle();
-    machine3.shuffle();
-    machine4.shuffle();
-    loaded = true;
-  }
-  else {
-  numberofspins = 0;
-  $("#recipename").animate({ opacity: 0 }, 200);
-  disableNudgeHold(false);
-  if (machine != machine1) {
-   //machine1.shuffle(2, onComplete ;
-    setTimeout(() => machine1.shuffle(2, onComplete), slottimes[numberofspins]);
-    addSpin();
-  }
-  if (machine != machine2) {
-    setTimeout(() => machine2.shuffle(2, onComplete), slottimes[numberofspins]);
-    addSpin();
-  }
-  if (machine != machine3) {
-    setTimeout(() => machine3.shuffle(2, onComplete), slottimes[numberofspins]);
-    addSpin();
-  }
-  if (machine != machine4) {
-    setTimeout(() => machine4.shuffle(2, onComplete), slottimes[numberofspins]);
-    addSpin();
-  } 
-  }
+    if (loaded == false) {
+        machine1.shuffle();
+        machine2.shuffle();
+        machine3.shuffle();
+        machine4.shuffle();
+        loaded = true;
+    } else {
+        numberofspins = 0;
+         
+        disableNudgeHold(false);
+
+        if (firstspin == true) {
+        
+        if (machine == 5) {
+            $("#spin-sound").get(0).play();
+        } else {
+            $("#hold-sound").get(0).play();
+        }
+      } else {
+        $("#firstspin-sound").get(0).play();
+        $("#recipename").animate({
+             opacity: 0
+         }, 200);
+      }
+
+        if (machine != machine1) {
+            //machine1.shuffle(2, onComplete ;
+            setTimeout(() => machine1.shuffle(2, onComplete), slottimes[numberofspins]);
+            addSpin();
+            vegetable1 = "";
+        }
+        else {
+          therecipename.innerHTML = wrapSpan(vegetable1);
+        }
+        if (machine != machine2) {
+            setTimeout(() => machine2.shuffle(2, onComplete), slottimes[numberofspins]);
+            addSpin();
+            vegetable2 = "";
+            comma = "";
+        }
+        else {
+          therecipename.innerHTML = wrapSpan(vegetable2);
+        }
+        if (machine != machine3) {
+            setTimeout(() => machine3.shuffle(2, onComplete), slottimes[numberofspins]);
+            addSpin();
+            vegetable3 = "";
+            conjunction = "";
+        }
+        else {
+          therecipename.innerHTML = wrapSpan(vegetable3);
+        }
+        if (machine != machine4) {
+            setTimeout(() => machine4.shuffle(2, onComplete), slottimes[numberofspins]);
+            addSpin();
+            thebase = "";  
+        }
+        else {
+          therecipename.innerHTML = wrapSpan(vegetable4);
+        }
+    }
 }
-
-
 
 // Typing
 
@@ -332,11 +462,11 @@ var txt = 'vegenerator'; /* The text */
 var speed = 60; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("typewriter").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
+    if (i < txt.length) {
+        document.getElementById("typewriter").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
 }
 
 var g = 0;
@@ -344,41 +474,78 @@ var txt2 = 'generate a recipe'; /* The text */
 var speed = 60; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter2() {
-  if (g < txt2.length) {
-    document.getElementById("recipename").innerHTML += txt2.charAt(g);
-    g++;
-    setTimeout(typeWriter2, speed);
-  }
+    if (g < txt2.length) {
+        document.getElementById("recipename").innerHTML += txt2.charAt(g);
+        g++;
+        setTimeout(typeWriter2, speed);
+    }
 }
 
-// function visibleMachine() {
-//   document.getElementById("vegetableMachine").className = 'row vegMachine center-xs visible';
-// }
 
-var vegetableMachine = document.getElementById("vegetableMachine");
+// Page Load
 
 function visible(element) {
-  element.classList.remove('hidden');
-  element.classList.add('visible');
+    element.classList.remove('hidden');
+    element.classList.add('visible');
 }
 
-setTimeout(typeWriter, 500);
-setTimeout(typeWriter2, 1500);
-// setTimeout(function() {
-//     visible(vegetableMachine);
-// }, 3000)
-// // setTimeout(function() {
-// //     flipIn(spin);
-// // }, 3500)
-// setTimeout(function() {
-//     footer(spin);
-// }, 4000)
-setTimeout(spin(5), 200);
+const animateCSS = (element, animation, prefix = 'animate__') =>
+    // We create a Promise and return it
+    new Promise((resolve, reject) => {
+        const animationName = `${prefix}${animation}`;
+        const node = document.querySelector(element);
+
+        node.classList.add(`${prefix}animated`, animationName);
+
+        // When the animation ends, we clean the classes and resolve the Promise
+        function handleAnimationEnd(event) {
+            event.stopPropagation();
+            node.classList.remove(`${prefix}animated`, animationName);
+            resolve('Animation ended');
+        }
+
+        node.addEventListener('animationend', handleAnimationEnd, {
+            once: true
+        });
+    });
+
+$(document).ready(function() {
+    // TypeWriter
+    setTimeout(function() {
+        spin(5);
+    }, 200)
+
+    setTimeout(typeWriter, 500);
+    setTimeout(function() {
+        $("#vegenerator-dial-intro").get(0).play();
+    }, 500)
+    setTimeout(function() {
+        $("#vegenerator-minusintro").get(0).play();
+    }, 16595)
+    setTimeout(typeWriter2, 1500);
 
 
+    setTimeout(function() {
+        animateCSS('#vegetableMachine', 'fadeIn');
+        vegetableMachine.classList.remove('hidden');
+    }, 3500)
 
+    setTimeout(function() {
+        animateCSS('#spin', 'flipInX');
+        spinbutton.classList.remove('hidden');
+    }, 4000)
 
-// 
+    setTimeout(function() {
+        animateCSS('.thefooter', 'fadeInUp');
+        footer.classList.remove('hidden');
+    }, 5000)
+});
+
+/// Budgetify
+
+function Budgetify(){
+  vegetables.splice( $.inArray(removeItem, vegetables), 'Avocado' );
+}
 
     </script>
 
