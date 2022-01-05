@@ -18,7 +18,7 @@ var base = new Array(
 "Cous Cous",
 "Orzo",
 "Noodles",
-"Tacos ",
+"Tacos",
 "Curry",
 "Pearl Barley",
 "Pizza",

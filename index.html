@@ -141,12 +141,12 @@
             <source src="sound/vegenerator.m4a" type="audio/mpeg">
         </audio> -->
 
-        <audio id="vegenerator-dial-intro">
-            <source src="sound/vegenerator-dial-intro.m4a" type="audio/mpeg">
+        <audio id="vegenerator-dial">
+            <source src="sound/vegenerator-intro.m4a" type="audio/mpeg">
         </audio>
 
-        <audio id="vegenerator-minusintro" loop>
-            <source src="sound/vegenerator-minusintro.m4a" type="audio/mpeg">
+        <audio id="vegenerator-music" loop>
+            <source src="sound/vegenerator-song.m4a" type="audio/mpeg">
         </audio>
 
         <audio id="nudge-sound">
@@ -182,9 +182,10 @@
  
  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./dist/jquery.slotmachine.js"></script>
     <script src="./dist/slotmachine.js"></script>
     <script src="./dist/words.js"></script>
-    <script src="./dist/jquery.slotmachine.js"></script>
+    
     <script src="./dist/vegenerator.js"></script>
 
     <script type="text/javascript">
@@ -196,10 +197,10 @@ $(document).ready(function() {
 
     setTimeout(typeWriter, 500);
     setTimeout(function() {
-        $("#vegenerator-dial-intro").get(0).play();
+        $("#vegenerator-dial").get(0).play();
     }, 500)
     setTimeout(function() {
-        $("#vegenerator-minusintro").get(0).play();
+        $("#vegenerator-song").get(0).play();
     }, 16595)
     setTimeout(typeWriter2, 1500);
 
