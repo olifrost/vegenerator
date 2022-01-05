@@ -59,6 +59,8 @@ var machine4index = "";
 
 var theingredient = "nil"
 
+var pageloaded = false;
+
 var thetype = "";
 var theindex = "";
 var themachine = "";
@@ -334,10 +336,28 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 // Keyboard Shortcuts
 
 $(document).on('keypress',function(e) {
+    if (pageloaded == true) {
     if(e.which == 13) {
         spin(5);
     }
+    if (firstspin == true) {
+        if(e.which == 49) {
+            nudge(machine1);
+        }
+        if(e.which == 50) {
+            nudge(machine2);
+        }
+        if(e.which == 51) {
+            nudge(machine3);
+        }
+        if(e.which == 52) {
+            nudge(machine4);
+        }
+    }
+    }
 });
+
+
 
 /// Budgetify
 function Budgetify(){

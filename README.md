@@ -21,7 +21,18 @@ Version 1.1
 Version 7.0
 - Use A.I. to identify more succesful combinations, like falafel and red onion (Help wanted)
 
+## Keyboard Shortcuts
+
+**Enter** = Spin
+**1, 2, 3, 4** = Nudge
+
+## Usage
+
+Repurpose with attribution (pretty please).
+
 Code may be offensive to seasoned developers.
+
+## Credits
 
 Borrows from some other nice projects
 [Jquery Slot Machine](https://github.com/josex2r/jQuery-SlotMachine)

@@ -16,6 +16,14 @@ var base = new Array(
 "Risotto",
 "Tart",
 "Cous Cous",
+"Orzo",
+"Noodles",
+"Tacos ",
+"Curry",
+"Pearl Barley",
+"Pizza",
+"Pita",
+"Sourdough"
 );
 
 var vegetables = new Array(
@@ -68,11 +76,15 @@ var vegetables = new Array(
 "Pumpkin",
 "Sprout",
 "Pak Choi",
-"Pine nut",
+"Pine Nut",
 "Walnut",
 "Almond",
 "Cashew",
-"Pearl Barley"
+"Okra",
+"Olive",
+"Chilli", 
+"Celery", 
+"Celeriac"
 );
 
 var extras = new Array(
