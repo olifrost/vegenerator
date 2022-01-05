@@ -14,7 +14,16 @@ var base = new Array(
 "Bulgur Wheat",
 "Spelt",
 "Risotto",
+"Tart",
 "Cous Cous",
+"Orzo",
+"Noodles",
+"Tacos",
+"Curry",
+"Pearl Barley",
+"Pizza",
+"Pita",
+"Sourdough"
 );
 
 var vegetables = new Array(
@@ -57,7 +66,25 @@ var vegetables = new Array(
 "Green Lentil",
 "Butter Bean",
 "Red Kidney Bean",
-"Black Bean"
+"Black Bean",
+"New Potato",
+"Rocket",
+"Fennel",
+"Artichoke",
+"Tenderstem Broccoli",
+"Sundried Tomato",
+"Pumpkin",
+"Sprout",
+"Pak Choi",
+"Pine Nut",
+"Walnut",
+"Almond",
+"Cashew",
+"Okra",
+"Olive",
+"Chilli", 
+"Celery", 
+"Celeriac"
 );
 
 var extras = new Array(
@@ -75,7 +102,7 @@ var extras = new Array(
 // var vegetable2 = vegetables[Math.floor(Math.random() * vegetables.length)];
 // var vegetable3 = vegetables[Math.floor(Math.random() * vegetables.length)];
 // var theextra = extras[Math.floor(Math.random() * extras.length)];
-// var randomBrief = vegetable1 + ", " + vegetable2 + " and " + vegetable3 + " " + thebase + " with " + theextra;
+// var randomBrief = vegetable1 +"," + vegetable2 +" and" + vegetable3 +"" + thebase +" with" + theextra;
 // }
 // window.randomBrief = randomBrief;
 // $("#brief-card").fadeOut(function() {
