@@ -271,23 +271,22 @@ body {
   .randomizeMachine {
     border: 1px solid white;
   }
-  .col {
-    max-width: 242px;
-  }
-  .randomizeMachine {
-    height: 240px;
-    max-width: 240px;
-    margin: auto;
-    box-sizing: border-box;
-  }
-  .machineResult {
+    .col {
+      max-width: 242px;
+    }
+    .randomizeMachine {
+      height: 240px;
+      max-width: 240px;
+      margin: auto;
+    }
+    .randomizeMachine img {
+      max-width: 240px;
+      max-height: 240px;
+    }
+      .machineResult {
     text-align: center;
     padding: 3rem 0rem;
     padding-bottom: 0rem;
-  }
-  .randomizeMachine img {
-    max-width: 240px;
-    /*filter: invert(1);*/
   }
 
   /*Fix Out Of Sync*/
@@ -389,6 +388,11 @@ body {
     align-items: center;
   }
   @media only screen and (max-width: 1006px) {
+      /*Fix Out Of Sync*/
+/*  .slotMachineContainer div {
+    position: relative;
+    top: 35px;
+  }*/
     h1 {
       font-size: 2rem;
       margin: 0;

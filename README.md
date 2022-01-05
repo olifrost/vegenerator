@@ -2,7 +2,7 @@
  
 Takes the name of three vegetables, and a base, to make a fancy sounding plant-based recipe.
 
-Drawings and Concept by !Scraggle Drargon](https://instagram.com/scraggledragon)
+Drawings and Concept by [Scraggle Drargon](https://instagram.com/scraggledragon)
 Music and Site by [Oli Frost](https://olifro.st/links)
 
 ## Roadmap
