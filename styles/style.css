@@ -385,12 +385,8 @@ body {
     justify-content: center;
     align-items: center;
   }
-  @media only screen and (max-width: 1006px) {
-      /*Fix Out Of Sync*/
-/*  .slotMachineContainer div {
-    position: relative;
-    top: 35px;
-  }*/
+  @media only screen and (max-width: 1004px) {
+
     h1 {
       font-size: 2rem;
       margin: 0;
@@ -436,16 +432,16 @@ body {
       padding: 0.5rem;
     }
     .col {
-      max-width: 120px;
+      max-width: 142px;
     }
     .randomizeMachine {
-      height: 120px;
-      max-width: 120px;
+      height: 140px;
+      max-width: 140px;
       margin: auto;
     }
     .randomizeMachine img {
-      max-width: 120px;
-      max-height: 120px;
+      max-width: 140px;
+      max-height: 140px;
     }
     .thefooter {
       font-size: .75rem;

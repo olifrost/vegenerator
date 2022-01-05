@@ -236,6 +236,7 @@ function spin(machine) {
         }
       } else {
         // $("#firstspin-sound").get(0).play();
+        $("#spin-sound").get(0).play();
         $("#vegenerator-music").get(0).play();
         $("#recipename").animate({
              opacity: 0
