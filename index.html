@@ -1,11 +1,12 @@
-<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Vegenerator</title>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
 
-  <title>Vegenerator</title>
+
   <meta name="description" content="Generates a plant-based recipe">
   <meta name="author" content="Oli Frost">
 
@@ -22,10 +23,19 @@
   <link rel="manifest" href="/manifest.webmanifest">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="./styles/flexboxgrid.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="./styles/style.css" type="text/css" media="screen" />
 
-</head>
+    <link rel="stylesheet" href="./styles/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./dist/jquery.slotmachine.css" type="text/css" media="screen" />
+
+    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./dist/slotmachine.js"></script>
+    <link rel="stylesheet" href="./styles/flexboxgrid.css" type="text/css" media="screen" />
+    
+    
+    <script src="./dist/jquery.slotmachine.js"></script>
+  </head>
+
+
 
 <body>
 
@@ -51,7 +61,7 @@
                 <div>
                 </div>
 
-                <div id="vegetableMachine" class="hidden row vegMachine center-xs">
+                <div id="vegetableMachine" class="row vegMachine hidden center-xs">
 
                     <div class="col">
                         <div>
@@ -180,10 +190,8 @@
 
     </div> 
  
- 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./dist/jquery.slotmachine.js"></script>
-    <script src="./dist/slotmachine.js"></script>
+    
+    
     <script src="./dist/words.js"></script>
     
     <script src="./dist/vegenerator.js"></script>

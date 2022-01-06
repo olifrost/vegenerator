@@ -86,26 +86,3 @@ var vegetables = new Array(
 "Celery", 
 "Celeriac"
 );
-
-var extras = new Array(
-"Cheddar Cheese",
-"Goats Cheese",
-"Feta",
-"Mozzarella",
-"Egg",
-"Tofu");
-
-// Briefs
-// function writeSubjectBrief() {
-// var thebase = base[Math.floor(Math.random() * base.length)];
-// var vegetable1 = vegetables[Math.floor(Math.random() * vegetables.length)];
-// var vegetable2 = vegetables[Math.floor(Math.random() * vegetables.length)];
-// var vegetable3 = vegetables[Math.floor(Math.random() * vegetables.length)];
-// var theextra = extras[Math.floor(Math.random() * extras.length)];
-// var randomBrief = vegetable1 +"," + vegetable2 +" and" + vegetable3 +"" + thebase +" with" + theextra;
-// }
-// window.randomBrief = randomBrief;
-// $("#brief-card").fadeOut(function() {
-// $("#gobutton").html('Write');
-// $("#brief").text(randomBrief);
-// }).fadeIn();}
