@@ -13,37 +13,36 @@ var dialup = new Howl({
 var nudgesound = new Howl({
      src: ['.sound/nudge.m4a.m4a'],
      autoplay: false,
-    loop: true
+     loop: false
 });
 
 var holdsound = new Howl({
      src: ['sound/byoop.m4a'],
      autoplay: false,
-    loop: true
+     loop: false
 });
 
 var spinsound = new Howl({
      src: ['sound/bweep.m4a'],
      autoplay: false,
-    loop: true
+     loop: false
 });
 
 var beep1 = new Howl({
      src: ['sound/beep1.m4a'],
      autoplay: false,
-    loop: true
+     loop: false
 });
 
 var beep2 = new Howl({
      src: ['sound/beep2.m4a'],
      autoplay: false,
-    loop: true
+     loop: false
 });
 
 var firstspinsound = new Howl({
      src: ['sound/blingbling.m4a'],
      autoplay: false,
-    loop: true
 });
 
 
