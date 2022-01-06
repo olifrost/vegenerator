@@ -147,47 +147,9 @@
             </div>
         </footer>
 
-<!--         <audio id="vegenerator-music" loop>
-            <source src="sound/vegenerator.m4a" type="audio/mpeg">
-        </audio> -->
-<!-- 
         <audio id="vegenerator-dial">
             <source src="sound/vegenerator-intro.m4a" type="audio/mpeg">
         </audio>
-
-        <audio id="vegenerator-music" loop>
-            <source src="sound/vegenerator-song.m4a" type="audio/mpeg">
-        </audio>
-
-        <audio id="nudge-sound">
-            <source src="sound/nudge.m4a" type="audio/mpeg">
-        </audio>
-
-        <audio id="success-sound">
-            <source src="sound/boop.m4a" type="audio/mpeg">
-        </audio>
-
-        <audio id="hold-sound">
-            <source src="sound/byoop.m4a" type="audio/mpeg">
-        </audio>
-
-        <audio id="spin-sound">
-            <source src="sound/bweep.m4a" type="audio/mpeg">
-        </audio>
-
-        <audio id="firstspin-sound">
-            <source src="sound/blingbling.m4a" type="audio/mpeg">
-        </audio>
-
-
-        <audio id="beep1-3">
-            <source src="sound/beep1.m4a" type="audio/mpeg">
-        </audio>
-
-        <audio id="beep4">
-            <source src="sound/beep2.m4a" type="audio/mpeg">
-        </audio>
- -->
     </div> 
  
     
@@ -202,11 +164,12 @@ $(document).ready(function() {
     // TypeWriter
     setTimeout(function() {
         spin(5);
-    }, 200)
+    }, 700)
 
     setTimeout(typeWriter, 500);
     
     dialup.play();
+    $("#vegenerator-dial").get(0).play();
 
     setTimeout(typeWriter2, 1500);
 

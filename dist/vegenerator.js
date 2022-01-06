@@ -11,7 +11,7 @@ var dialup = new Howl({
 });
 
 var nudgesound = new Howl({
-     src: ['.sound/nudge.m4a.m4a'],
+     src: ['sound/nudge.m4a'],
      autoplay: false,
      loop: false
 });
