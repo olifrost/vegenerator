@@ -242,7 +242,12 @@ function setRecipeName() {
 
 // Number Combinations
 
-var combinations = (vegetables.length * vegetables.length * vegetables.length * base.length);
+// var combinations = (vegetables.length * vegetables.length * vegetables.length * base.length);
+
+var v = vegetables.length
+var b = base.length
+
+var combinations = (v * (v-1) * (v-2) * b)/6
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
