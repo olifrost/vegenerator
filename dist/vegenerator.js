@@ -1,3 +1,11 @@
+var music = new Howl({
+     src: ['../sound/vegenerator-song.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+var mute = false;
+
 function listImages(list, themachineid) {
         list.forEach(function(image) { // for each link l in ArrayOfImages
             var div = document.createElement('div');
@@ -247,7 +255,7 @@ function spin(machine) {
       } else {
         // $("#firstspin-sound").get(0).play();
         $("#spin-sound").get(0).play();
-        $("#vegenerator-music").get(0).play();
+        music.play();
         $("#recipename").animate({
              opacity: 0
          }, 200);
