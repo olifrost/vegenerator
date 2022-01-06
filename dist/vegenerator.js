@@ -4,6 +4,51 @@ var music = new Howl({
     loop: true
 });
 
+var dialup = new Howl({
+     src: ['../sound/vegenerator-intro.m4a'],
+     autoplay: true,
+    loop: false
+});
+
+var nudgesound = new Howl({
+     src: ['../sound/nudge.m4a.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+var holdsound = new Howl({
+     src: ['../sound/byoop.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+var spinsound = new Howl({
+     src: ['../sound/bweep.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+var beep1 = new Howl({
+     src: ['../sound/beep1.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+var beep2 = new Howl({
+     src: ['../sound/beep2.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+var firstspinsound = new Howl({
+     src: ['../sound/blingbling.m4a'],
+     autoplay: false,
+    loop: true
+});
+
+
+
+
 var mute = false;
 
 function listImages(list, themachineid) {
@@ -156,10 +201,10 @@ function onComplete(active, type) {
     themachine = this.number;
     whichNametoUpdate(theindex, themachine, getnamefromIndex(theindex, thetype));
     if (themachine != 4) {
-      $("#beep1-3").get(0).play();
+      beep1.play();
     }
     else {
-      $("#beep4").get(0).play();
+      beep2.play();
     }
     setRecipeName();
 
@@ -219,7 +264,7 @@ disableNudgeHold(true);
 
 // Nudge and Spin
 function nudge(machine) {
-    $("#nudge-sound").get(0).play();
+    nudgesound.play();
     machine.next();
     whichNametoUpdate(machine.active, machine.number, getnamefromIndex(machine.active, machine.type));
     setRecipeName();
@@ -248,13 +293,13 @@ function spin(machine) {
         if (firstspin == true) {
         
         if (machine == 5) {
-            $("#spin-sound").get(0).play();
+            spinsound.play();
         } else {
-            $("#hold-sound").get(0).play();
+            holdsound.play();
         }
       } else {
         // $("#firstspin-sound").get(0).play();
-        $("#spin-sound").get(0).play();
+        spinsound.play();
         music.play();
         $("#recipename").animate({
              opacity: 0
