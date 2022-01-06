@@ -116,7 +116,7 @@
                 <div id="spin" class="row center-xs hidden" align="center">
                     <div class="col">
                         <div class="btn btn-lg" role="group">
-                            <button id="randomizeButton" type="button" class="btn" onclick="spin(5)">Spin</button>
+                            <button id="randomizeButton" type="button" class="btn spinbutton" onclick="spin(5)">Spin</button>
                         </div>
                     </div>
                 </div>
@@ -196,12 +196,10 @@ $(document).ready(function() {
     }, 200)
 
     setTimeout(typeWriter, 500);
-    setTimeout(function() {
-        $("#vegenerator-dial").get(0).play();
-    }, 500)
-    setTimeout(function() {
-        $("#vegenerator-song").get(0).play();
-    }, 16595)
+    
+    $("#vegenerator-dial").get(0).play();
+    
+
     setTimeout(typeWriter2, 1500);
 
 

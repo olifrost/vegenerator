@@ -154,6 +154,11 @@ function onComplete(active, type) {
       $("#beep4").get(0).play();
     }
     setRecipeName();
+
+    if (machine1.running == false && machine2.running == false && machine3.running == false && machine4.running == false) {
+        disableNudgeHold(false);
+        disableSpin(false)
+    }
 }
 
 function wrapSpan(veg) {
@@ -198,6 +203,10 @@ function disableNudgeHold(truth) {
     $('button.nudge').attr('disabled', truth);
     $('button.hold').attr('disabled', truth);
 }
+function disableSpin(truth) {
+    $('button.spinbutton').attr('disabled', truth);
+    
+}
 disableNudgeHold(true);
 
 // Nudge and Spin
@@ -225,7 +234,8 @@ function spin(machine) {
     } else {
         numberofspins = 0;
          
-        disableNudgeHold(false);
+        disableNudgeHold(true);
+        disableSpin(true);
 
         if (firstspin == true) {
         
@@ -338,7 +348,8 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 // Keyboard Shortcuts
 
 $(document).on('keypress',function(e) {
-    if (pageloaded == true) {
+
+    if (pageloaded == true && machine1.running == false && machine2.running == false && machine3.running == false && machine4.running == false) {
     if(e.which == 13) {
         spin(5);
     }

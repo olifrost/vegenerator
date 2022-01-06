@@ -313,6 +313,8 @@ body {
   /* Button Group */
   button {
     font-family: 'Katwijk Bold';
+    transition-property: border-color, color;
+    transition-duration: 1s, 1s;
   }
   .btn-group button {
     font-family: 'Katwijk Light';
