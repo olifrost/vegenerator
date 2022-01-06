@@ -37,7 +37,7 @@ var raf = require('./raf');
 
 var defaults = {
   active: 1, // Active element [Number]
-  delay: 200, // Animation time [Number]
+  delay: 700, // Animation time [Number]
   auto: false, // Repeat delay [false||Number]
   spins: 5, // Number of spins when auto [Number]
   randomize: null, // Randomize function, must return a number with the selected position
