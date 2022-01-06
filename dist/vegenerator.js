@@ -1,47 +1,47 @@
 var music = new Howl({
-     src: ['../sound/vegenerator-song.m4a'],
+     src: ['vegenerator/sound/vegenerator-song.m4a'],
      autoplay: false,
     loop: true
 });
 
 var dialup = new Howl({
-     src: ['../sound/vegenerator-intro.m4a'],
+     src: ['vegenerator/sound/vegenerator-intro.m4a'],
      autoplay: true,
     loop: false
 });
 
 var nudgesound = new Howl({
-     src: ['../sound/nudge.m4a.m4a'],
+     src: ['.vegenerator/sound/nudge.m4a.m4a'],
      autoplay: false,
     loop: true
 });
 
 var holdsound = new Howl({
-     src: ['../sound/byoop.m4a'],
+     src: ['vegenerator/sound/byoop.m4a'],
      autoplay: false,
     loop: true
 });
 
 var spinsound = new Howl({
-     src: ['../sound/bweep.m4a'],
+     src: ['vegenerator//sound/bweep.m4a'],
      autoplay: false,
     loop: true
 });
 
 var beep1 = new Howl({
-     src: ['../sound/beep1.m4a'],
+     src: ['vegenerator//sound/beep1.m4a'],
      autoplay: false,
     loop: true
 });
 
 var beep2 = new Howl({
-     src: ['../sound/beep2.m4a'],
+     src: ['vegenerator//sound/beep2.m4a'],
      autoplay: false,
     loop: true
 });
 
 var firstspinsound = new Howl({
-     src: ['../sound/blingbling.m4a'],
+     src: ['vegenerator/sound/blingbling.m4a'],
      autoplay: false,
     loop: true
 });
