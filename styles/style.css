@@ -255,7 +255,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
       max-width: 280px;
     }
     #vegetableMachine {
-
+      margin-top: 1rem;
       margin-bottom: 0;
     }
     #randomizeButton {
