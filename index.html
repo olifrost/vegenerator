@@ -1,26 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Vegenerator</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
 
 
-  <meta name="description" content="Randomly generates plant-based recipe ideas">
-  <meta name="author" content="Oli Frost">
+    <meta name="description" content="Randomly generates plant-based recipe ideas">
+    <meta name="author" content="Oli Frost">
 
-<!-- OG Image -->
-  <meta property="og:title" content="Vegenerator">
-  <meta property="og:site_name" content="Vegenerator">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://olifro.st/vegenerator/">
-  <meta property="og:description" content="Randomly generates plant-based recipe ideas">
-  <meta property="og:image" content="https://olifro.st/vegenerator/img/site/ogimage.jpg">
-  <meta property="og:type" content="website" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/jpeg" />
+    <!-- OG Image -->
+    <meta property="og:title" content="Vegenerator">
+    <meta property="og:site_name" content="Vegenerator">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://olifro.st/vegenerator/">
+    <meta property="og:description" content="Randomly generates plant-based recipe ideas">
+    <meta property="og:image" content="https://olifro.st/vegenerator/img/site/ogimage.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta name="theme-color" content="#86EFAC">
 
     <!-- Twitter -->
@@ -31,23 +33,24 @@
     <meta name="twitter:site" content="@realolifrost">
     <meta name="twitter:creator" content="@realolifrost">
 
-     <link rel="icon" href="img/site/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="img/site/favicon.ico" sizes="any"><!-- 32×32 -->
     <link rel="icon" href="img/site/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/site/apple-touch-icon.png">
-  <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/site/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="stylesheet" href="./styles/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="./dist/jquery.slotmachine.css" type="text/css" media="screen" />
 
-    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./dist/slotmachine.js"></script>
     <link rel="stylesheet" href="./styles/flexboxgrid.css" type="text/css" media="screen" />
-    
-    
+
+
     <script src="./dist/jquery.slotmachine.js"></script>
-  </head>
+</head>
 
 
 
@@ -89,7 +92,7 @@
                                 <button type="button" class="hold button-outline" onclick="spin(machine1)">Hold</button>
                             </div>
                         </div>
-                    </div> 
+                    </div>
 
                     <div class="col">
                         <div>
@@ -99,11 +102,12 @@
                         <div id="machine2Result" class="col machineResult center-xs row">
                             <div class="btn-group nudgehold" role="group">
                                 <button type="button" class="btn nudge" onclick="nudge(machine2)">Nudge</button>
-                                <button type="button " class="btn button-outline hold" onclick="spin(machine2)">Hold</button>
+                                <button type="button " class="btn button-outline hold"
+                                    onclick="spin(machine2)">Hold</button>
                             </div>
                         </div>
                     </div>
-                    
+
 
 
                     <div class="col">
@@ -113,7 +117,8 @@
                             <div id="machine3Result" class="col machineResult center-xs row">
                                 <div class="btn-group nudgehold" role="group">
                                     <button type="button" class="btn nudge" onclick="nudge(machine3)">Nudge</button>
-                                    <button type="button" class="btn button-outline hold" onclick="spin(machine3)">Hold</button>
+                                    <button type="button" class="btn button-outline hold"
+                                        onclick="spin(machine3)">Hold</button>
                                 </div>
                             </div>
                         </div>
@@ -126,12 +131,13 @@
                             <div id="machine4Result" class="col machineResult center-xs row">
                                 <div class="btn-group nudgehold" role="group">
                                     <button type="button" class="btn nudge" onclick="nudge(machine4)">Nudge</button>
-                                    <button type="button button-outline" class="button-outline hold" onclick="spin(machine4)">Hold</button>
+                                    <button type="button button-outline" class="button-outline hold"
+                                        onclick="spin(machine4)">Hold</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                  </div>
+                </div>
 
 
 
@@ -140,11 +146,12 @@
                 <div id="spin" class="row center-xs hidden" align="center">
                     <div class="col">
                         <div class="btn btn-lg" role="group">
-                            <button id="randomizeButton" type="button" class="btn spinbutton" onclick="spin(5)">Spin</button>
+                            <button id="randomizeButton" type="button" class="btn spinbutton"
+                                onclick="spin(5)">Spin</button>
                         </div>
                     </div>
                 </div>
-              <!--   <div class="row">
+                <!--   <div class="row">
                   <div class="col-xs-12 center-xs">
                     <p class="small" onclick="Budgetify()">Budgetify</p>
                   </div>
@@ -156,67 +163,69 @@
         <footer id="footer" class="thefooter hidden">
             <div class="">
                 <p id="combinations"></p>
-                <p>created by <a class="nb" href="https://olifro.st">Oli Frost</a> and <a class="nb" href="https://instagram.com/ell_nmcgahey">Ellen McGahey</a></p>
-                <p><a href="https://ko-fi.com/olifrost">buy us a carrot</a></p> 
+                <p>created by <a class="nb" href="https://olifro.st">Oli Frost</a> and <a class="nb"
+                        href="https://instagram.com/ell_nmcgahey">Ellen McGahey</a></p>
+                <p><a href="https://ko-fi.com/olifrost">buy us a carrot</a></p>
             </div>
         </footer>
 
         <audio id="vegenerator-dial">
             <source src="sound/vegenerator-intro.m4a" type="audio/mpeg">
         </audio>
-    </div> 
- 
-    
-    <script src="./dist/howler.min.js"></script>    
+    </div>
+
+
+    <script src="./dist/howler.min.js"></script>
     <script src="./dist/words.js"></script>
-    
+
     <script src="./dist/vegenerator.js"></script>
 
 
     <script type="text/javascript">
-$(document).ready(function() {
-    // TypeWriter
-    setTimeout(function() {
-        spin(5);
-    }, 700)
+        $(document).ready(function () {
+            // TypeWriter
+            setTimeout(function () {
+                spin(5);
+            }, 700)
 
-    setTimeout(typeWriter, 500);
-    
-    dialup.play();
-    $("#vegenerator-dial").get(0).play();
+            setTimeout(typeWriter, 500);
 
-    setTimeout(typeWriter2, 1500);
+            dialup.play();
+            $("#vegenerator-dial").get(0).play();
+
+            setTimeout(typeWriter2, 1500);
 
 
-    setTimeout(function() {
-        animateCSS('#vegetableMachine', 'fadeIn');
-        vegetableMachine.classList.remove('hidden');
-    }, 3500)
+            setTimeout(function () {
+                animateCSS('#vegetableMachine', 'fadeIn');
+                vegetableMachine.classList.remove('hidden');
+            }, 3500)
 
-    setTimeout(function() {
-        animateCSS('#spin', 'flipInX');
-        spinbutton.classList.remove('hidden');
-    }, 4000)
+            setTimeout(function () {
+                animateCSS('#spin', 'flipInX');
+                spinbutton.classList.remove('hidden');
+            }, 4000)
 
-    setTimeout(function() {
-        animateCSS('.thefooter', 'fadeInUp');
-        footer.classList.remove('hidden');
-        pageloaded = true;
-    }, 5000)
-});
+            setTimeout(function () {
+                animateCSS('.thefooter', 'fadeInUp');
+                footer.classList.remove('hidden');
+                pageloaded = true;
+            }, 5000)
+        });
     </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-74QGH7BK80"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-74QGH7BK80"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-74QGH7BK80');
-</script>
+        gtag('config', 'G-74QGH7BK80');
+    </script>
 
 
 
-  </body>
+</body>
+
 </html>
