@@ -1,48 +1,48 @@
 var music = new Howl({
-     src: ['sound/vegenerator-song.m4a'],
-     autoplay: false,
+    src: ['sound/vegenerator-song.m4a'],
+    autoplay: false,
     loop: true
 });
 
 var dialup = new Howl({
-     src: ['sound/vegenerator-intro.m4a'],
-     autoplay: true,
+    src: ['sound/vegenerator-intro.m4a'],
+    autoplay: false,
     loop: false
 });
 
 var nudgesound = new Howl({
-     src: ['sound/nudge.m4a'],
-     autoplay: false,
-     loop: false
+    src: ['sound/nudge.m4a'],
+    autoplay: false,
+    loop: false
 });
 
 var holdsound = new Howl({
-     src: ['sound/byoop.m4a'],
-     autoplay: false,
-     loop: false
+    src: ['sound/byoop.m4a'],
+    autoplay: false,
+    loop: false
 });
 
 var spinsound = new Howl({
-     src: ['sound/bweep.m4a'],
-     autoplay: false,
-     loop: false
+    src: ['sound/bweep.m4a'],
+    autoplay: false,
+    loop: false
 });
 
 var beep1 = new Howl({
-     src: ['sound/beep1.m4a'],
-     autoplay: false,
-     loop: false
+    src: ['sound/beep1.m4a'],
+    autoplay: false,
+    loop: false
 });
 
 var beep2 = new Howl({
-     src: ['sound/beep2.m4a'],
-     autoplay: false,
-     loop: false
+    src: ['sound/beep2.m4a'],
+    autoplay: false,
+    loop: false
 });
 
 var firstspinsound = new Howl({
-     src: ['sound/blingbling.m4a'],
-     autoplay: false,
+    src: ['sound/blingbling.m4a'],
+    autoplay: false,
 });
 
 
@@ -51,23 +51,23 @@ var firstspinsound = new Howl({
 var mute = false;
 
 function listImages(list, themachineid) {
-        list.forEach(function(image) { // for each link l in ArrayOfImages
-            var div = document.createElement('div');
-            var img = document.createElement('img'); // create an img element
-            // div.id = image
-            var themachine = document.getElementById(themachineid);
-            img.src = "img/" + image + ".png"; // set its src to the link l
-            themachine.appendChild(div); // append it to the body 
-            div.appendChild(img); // append it to the body 
-        });
-    }
+    list.forEach(function (image) { // for each link l in ArrayOfImages
+        var div = document.createElement('div');
+        var img = document.createElement('img'); // create an img element
+        // div.id = image
+        var themachine = document.getElementById(themachineid);
+        img.src = "img/" + image + ".png"; // set its src to the link l
+        themachine.appendChild(div); // append it to the body 
+        div.appendChild(img); // append it to the body 
+    });
+}
 listImages(vegetables, "machine1");
 listImages(vegetables, "machine2");
 listImages(vegetables, "machine3");
-listImages(base, "machine4"); 
+listImages(base, "machine4");
 
 // Define Machine
-    const btn = document.querySelector('#randomizeButton');
+const btn = document.querySelector('#randomizeButton');
 const results = {
     machine1: document.querySelector('#machine1Result'),
     machine2: document.querySelector('#machine2Result'),
@@ -200,10 +200,10 @@ function onComplete(active, type) {
     themachine = this.number;
     whichNametoUpdate(theindex, themachine, getnamefromIndex(theindex, thetype));
     if (themachine != 4) {
-      beep1.play();
+        beep1.play();
     }
     else {
-      beep2.play();
+        beep2.play();
     }
     setRecipeName();
 
@@ -220,16 +220,16 @@ function wrapSpan(veg) {
 function setRecipeName() {
 
     var recipename = wrapSpan(vegetable1) + comma + wrapSpan(vegetable2) + conjunction + wrapSpan(vegetable3) + " " + wrapSpan(thebase);
-    
- 
+
+
     therecipename.innerHTML = recipename;
-    
-    
+
+
     if (firstspin == false) {
-        setTimeout(function() {
+        setTimeout(function () {
             firstspin = true;
-             $("#recipename").animate({
-              opacity: 1
+            $("#recipename").animate({
+                opacity: 1
             }, 1000);
             animateCSS('#machine1Result', 'pulse');
             animateCSS('#machine2Result', 'pulse');
@@ -247,7 +247,7 @@ function setRecipeName() {
 var v = vegetables.length
 var b = base.length
 
-var combinations = (v * (v-1) * (v-2) * b)/6
+var combinations = (v * (v - 1) * (v - 2) * b) / 6
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -262,7 +262,7 @@ function disableNudgeHold(truth) {
 }
 function disableSpin(truth) {
     $('button.spinbutton').attr('disabled', truth);
-    
+
 }
 disableNudgeHold(true);
 
@@ -290,25 +290,25 @@ function spin(machine) {
         loaded = true;
     } else {
         numberofspins = 0;
-         
+
         disableNudgeHold(true);
         disableSpin(true);
 
         if (firstspin == true) {
-        
-        if (machine == 5) {
-            spinsound.play();
+
+            if (machine == 5) {
+                spinsound.play();
+            } else {
+                holdsound.play();
+            }
         } else {
-            holdsound.play();
+            // $("#firstspin-sound").get(0).play();
+            spinsound.play();
+            music.play();
+            $("#recipename").animate({
+                opacity: 0
+            }, 200);
         }
-      } else {
-        // $("#firstspin-sound").get(0).play();
-        spinsound.play();
-        music.play();
-        $("#recipename").animate({
-             opacity: 0
-         }, 200);
-      }
 
         if (machine != machine1) {
             //machine1.shuffle(2, onComplete ;
@@ -317,7 +317,7 @@ function spin(machine) {
             vegetable1 = "";
         }
         else {
-          therecipename.innerHTML = wrapSpan(vegetable1);
+            therecipename.innerHTML = wrapSpan(vegetable1);
         }
         if (machine != machine2) {
             setTimeout(() => machine2.shuffle(2, onComplete), slottimes[numberofspins]);
@@ -326,7 +326,7 @@ function spin(machine) {
             comma = "";
         }
         else {
-          therecipename.innerHTML = wrapSpan(vegetable2);
+            therecipename.innerHTML = wrapSpan(vegetable2);
         }
         if (machine != machine3) {
             setTimeout(() => machine3.shuffle(2, onComplete), slottimes[numberofspins]);
@@ -335,15 +335,15 @@ function spin(machine) {
             conjunction = "";
         }
         else {
-          therecipename.innerHTML = wrapSpan(vegetable3);
+            therecipename.innerHTML = wrapSpan(vegetable3);
         }
         if (machine != machine4) {
             setTimeout(() => machine4.shuffle(2, onComplete), slottimes[numberofspins]);
             addSpin();
-            thebase = "";  
+            thebase = "";
         }
         else {
-          therecipename.innerHTML = wrapSpan(vegetable4);
+            therecipename.innerHTML = wrapSpan(vegetable4);
         }
     }
 }
@@ -404,33 +404,33 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
 // Keyboard Shortcuts
 
-$(document).on('keypress',function(e) {
+$(document).on('keypress', function (e) {
 
     if (pageloaded == true && machine1.running == false && machine2.running == false && machine3.running == false && machine4.running == false) {
-    if(e.which == 13) {
-        spin(5);
-    }
-    if (firstspin == true) {
-        if(e.which == 49) {
-            nudge(machine1);
+        if (e.which == 13) {
+            spin(5);
         }
-        if(e.which == 50) {
-            nudge(machine2);
+        if (firstspin == true) {
+            if (e.which == 49) {
+                nudge(machine1);
+            }
+            if (e.which == 50) {
+                nudge(machine2);
+            }
+            if (e.which == 51) {
+                nudge(machine3);
+            }
+            if (e.which == 52) {
+                nudge(machine4);
+            }
         }
-        if(e.which == 51) {
-            nudge(machine3);
-        }
-        if(e.which == 52) {
-            nudge(machine4);
-        }
-    }
     }
 });
 
 
 
 /// Budgetify
-function Budgetify(){
-  vegetables.splice( $.inArray(removeItem, vegetables), 'Avocado' );
+function Budgetify() {
+    vegetables.splice($.inArray(removeItem, vegetables), 'Avocado');
 }
 
